@@ -17,7 +17,7 @@ class Item():
     def get_item_description(self):
         print(self.description)
     
-    def set_item(self, the_item): #creating the key object
+    def set_item(self, the_item): #creating the key object for task 5
         self.item = the_item
         print(self.item)
     
