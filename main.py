@@ -33,15 +33,22 @@ ballroom.link_room(dining_hall, "east")
 
 
 
-
+#1st Enemy character
 dave = Enemy("Dave", "A smelly zombie")
 dave.set_conversation("I want to eat your flesh!!")
 dave.set_weakness("sword")
 
 dining_hall.set_character(dave)
 
+#2nd Enemy character
+Tom = Enemy("Tom", "An evil goblin")
+Tom.set_conversation("I will kill anyone who comes in my way!!")
+Tom.set_weakness("acid")
+
+kitchen.set_character(Tom)
 
 
+#Friendly character
 sam = Friend("Sam", "A strong heroic soldier") #Task 3
 sam.set_conversation("I will defeat the enemy!")
 sam.set_weakness("cheese")
@@ -51,7 +58,7 @@ ballroom.set_character(sam)
 
 
 
-#THE ITEM - Key
+#THE ITEM - Key Task 5
 key = Item()
 key.set_item("key")
 key.set_item_description("This is the key")
@@ -90,8 +97,9 @@ while True:
         dave.talk()   
     elif command == "fight": #Task 1
         dave.fight()
-        if dave.fight() == False: #Task 2
+        if dave.fight("sword") == False: #Task 2
             print("Game has ended")
+    else:
         break
 
 

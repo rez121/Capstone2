@@ -10,6 +10,12 @@ dave.talk()
 dave.set_weakness("sword")
 
 
+Tom = Enemy("Tom", "An evil goblin")
+Tom.describe()
+Tom.set_conversation("I will kill anyone who comes in my way!!")
+Tom.talk()
+Tom.set_weakness("acid")
+
 
 sam = Friend("Sam", "A strong heroic soldier")
 sam.set_conversation("I will defeat the enemy!")
